@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Navbar from "@/components/Navbar";
 import FloatingButtons from "@/components/FloatingButtons";
 import ProductSection from "@/components/ProductSection";
 import TestimonialCard from "@/components/TestimonialCard";
 import ContactForm from "@/components/ContactForm";
-import { ArrowRight, Award, Building2, Heart, MapPin } from "lucide-react";
+import { ArrowRight, Award, Building2, Heart, MapPin, Instagram, Facebook } from "lucide-react";
 
 import heroImage from "@/assets/hero-plaque.jpg";
 import acrylicMemorial from "@/assets/acrylic-memorial.jpg";
@@ -18,6 +19,7 @@ const Index = () => {
 
   return (
     <main className="min-h-screen">
+      <Navbar />
       <FloatingButtons />
 
       {/* Hero Section */}
@@ -136,7 +138,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4">
+      <section id="sobre" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold">Sobre a Vitória Placas</h2>
           
@@ -180,7 +182,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-card">
+      <section id="depoimentos" className="py-20 px-4 bg-card">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-4xl md:text-5xl font-bold">O Que Dizem Nossos Clientes</h2>
@@ -285,15 +287,13 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Redes Sociais</h4>
               <div className="flex gap-4">
                 <Button variant="outline" size="icon" asChild>
-                  <a href="https://instagram.com/vitoriaplacasoficial" target="_blank" rel="noopener noreferrer">
-                    <span className="sr-only">Instagram</span>
-                    📷
+                  <a href="https://instagram.com/vitoriaplacasoficial" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <Instagram className="h-5 w-5" />
                   </a>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
-                  <a href="https://facebook.com/vitoriaplacasoficial" target="_blank" rel="noopener noreferrer">
-                    <span className="sr-only">Facebook</span>
-                    📘
+                  <a href="https://facebook.com/vitoriaplacasoficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <Facebook className="h-5 w-5" />
                   </a>
                 </Button>
               </div>

@@ -1,4 +1,4 @@
-import { MessageCircle, Instagram } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const FloatingButtons = () => {
@@ -6,10 +6,10 @@ const FloatingButtons = () => {
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para placas personalizadas.");
   
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-6 right-6 z-50">
       <Button
         size="icon"
-        className="h-14 w-14 rounded-full bg-primary shadow-lg hover:scale-110 transition-transform duration-300"
+        className="h-16 w-16 rounded-full bg-transparent border-2 border-primary shadow-lg hover:scale-110 hover:bg-primary/10 transition-all duration-300"
         asChild
       >
         <a
@@ -18,22 +18,7 @@ const FloatingButtons = () => {
           rel="noopener noreferrer"
           aria-label="Contato via WhatsApp"
         >
-          <MessageCircle className="h-6 w-6" />
-        </a>
-      </Button>
-      
-      <Button
-        size="icon"
-        className="h-14 w-14 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 shadow-lg hover:scale-110 transition-transform duration-300"
-        asChild
-      >
-        <a
-          href="https://instagram.com/vitoriaplacasoficial"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visite nosso Instagram"
-        >
-          <Instagram className="h-6 w-6" />
+          <MessageCircle className="h-8 w-8 text-primary" />
         </a>
       </Button>
     </div>
