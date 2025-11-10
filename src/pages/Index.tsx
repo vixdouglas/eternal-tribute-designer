@@ -34,10 +34,10 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 text-center space-y-8 fade-in">
-          <img src={logo} alt="Vitória Placas" className="w-64 md:w-96 mx-auto mb-8" />
+        <div className="container mx-auto px-4 relative z-10 text-center space-y-6 fade-in pt-20">
+          <img src={logo} alt="Vitória Placas" className="w-48 md:w-72 mx-auto" />
           
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Transformamos Homenagens<br />
             <span className="text-gradient">em Eternas Memórias</span>
           </h1>

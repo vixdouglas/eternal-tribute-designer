@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <img src={logo} alt="Vitória Placas" className="h-10" />
           
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             <a href="#produtos" className="text-foreground hover:text-primary transition-colors">
               Produtos
             </a>
@@ -50,18 +50,18 @@ const Navbar = () => {
             <a href="#contato" className="text-foreground hover:text-primary transition-colors">
               Contato
             </a>
-            
-            <Button 
-              size="sm"
-              className="gap-2"
-              asChild
-            >
-              <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
-                Solicitar Orçamento
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </Button>
           </div>
+          
+          <Button 
+            size="sm"
+            className="gap-2 hidden md:flex"
+            asChild
+          >
+            <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+              Solicitar Orçamento
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </div>
     </nav>
