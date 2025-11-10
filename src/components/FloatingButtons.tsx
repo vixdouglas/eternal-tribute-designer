@@ -6,10 +6,10 @@ const FloatingButtons = () => {
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para placas personalizadas.");
   
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50">
       <Button
         size="icon"
-        className="h-16 w-16 rounded-full bg-transparent border-2 border-primary shadow-lg hover:scale-110 hover:bg-primary/10 transition-all duration-300"
+        className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-transparent border-2 border-primary shadow-lg hover:scale-110 hover:bg-primary/10 transition-all duration-300"
         asChild
       >
         <a
@@ -18,7 +18,7 @@ const FloatingButtons = () => {
           rel="noopener noreferrer"
           aria-label="Contato via WhatsApp"
         >
-          <MessageCircle className="h-8 w-8 text-primary" />
+          <MessageCircle className="h-6 w-6 md:h-8 md:w-8 text-primary" />
         </a>
       </Button>
     </div>
