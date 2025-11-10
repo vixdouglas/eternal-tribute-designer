@@ -1,0 +1,36 @@
+import { Card, CardContent } from "@/components/ui/card";
+
+interface ProductSectionProps {
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  reverse?: boolean;
+}
+
+const ProductSection = ({ title, description, imageSrc, imageAlt, reverse = false }: ProductSectionProps) => {
+  return (
+    <section className="py-20 px-4">
+      <div className="container mx-auto max-w-6xl">
+        <div className={`grid md:grid-cols-2 gap-12 items-center ${reverse ? 'md:grid-flow-dense' : ''}`}>
+          <div className={`space-y-6 ${reverse ? 'md:col-start-2' : ''}`}>
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient">{title}</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">{description}</p>
+          </div>
+          
+          <Card className={`overflow-hidden hover-lift ${reverse ? 'md:col-start-1 md:row-start-1' : ''}`}>
+            <CardContent className="p-0">
+              <img 
+                src={imageSrc} 
+                alt={imageAlt}
+                className="w-full h-[400px] object-cover"
+              />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductSection;
