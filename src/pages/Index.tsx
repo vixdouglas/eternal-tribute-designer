@@ -12,6 +12,7 @@ import acrylicMemorial from "@/assets/acrylic-memorial.jpg";
 import awardPlaque from "@/assets/award-plaque.jpg";
 import inaugurationPlaque from "@/assets/inauguration-plaque.jpg";
 import gravePlaque from "@/assets/grave-plaque.jpg";
+import logo from "@/assets/logo.png";
 
 const Index = () => {
   const whatsappNumber = "5527307356XX";
@@ -34,6 +35,8 @@ const Index = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10 text-center space-y-8 fade-in">
+          <img src={logo} alt="Vitória Placas" className="w-64 md:w-96 mx-auto mb-8" />
+          
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Transformamos Homenagens<br />
             <span className="text-gradient">em Eternas Memórias</span>
@@ -268,7 +271,7 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold text-gradient mb-4">Vitória Placas</h3>
+              <img src={logo} alt="Vitória Placas" className="h-20 mb-4" />
               <p className="text-muted-foreground">
                 Transformando homenagens em eternas memórias desde sempre.
               </p>

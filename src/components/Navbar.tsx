@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -34,7 +35,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="text-xl font-bold text-gradient">Vitória Placas</div>
+          <img src={logo} alt="Vitória Placas" className="h-10" />
           
           <div className="hidden md:flex items-center gap-6">
             <a href="#produtos" className="text-foreground hover:text-primary transition-colors">
