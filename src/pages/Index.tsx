@@ -10,7 +10,6 @@ import { ArrowRight, Award, Building2, Heart, MapPin, Instagram, Facebook } from
 import { useMemo } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
-import heroImage from "@/assets/WhatsApp Image 2025-11-10 at 11.02.31 (1).jpeg";
 import awardPlaque from "@/assets/award-plaque.jpg";
 import inaugurationPlaque from "@/assets/inauguration-plaque.jpg";
 import gravePlaque from "@/assets/grave-plaque.jpg";
@@ -81,9 +80,9 @@ const Index = () => {
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
-            src={heroImage} 
+            src={awardPlaque} 
             alt="Placa de homenagem elegante"
-            className="w-full h-full object-cover object-[center_top] translate-y-[8%] sm:translate-y-[10%] scale-95 sm:scale-90"
+            className="w-full h-full object-cover object-center scale-100 sm:scale-100"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/92 via-background/75 to-background sm:from-background/90 sm:via-background/70 sm:to-background"></div>
         </div>
