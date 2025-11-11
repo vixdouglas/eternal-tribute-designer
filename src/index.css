@@ -8,10 +8,10 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
+    --background: 0 0% 15%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 10%;
+    --card: 0 0% 20%;
     --card-foreground: 0 0% 98%;
 
     --popover: 0 0% 10%;
@@ -108,8 +108,11 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, hsl(0, 0%, 15%), hsl(0, 0%, 18%), hsl(0, 0%, 20%), hsl(0, 0%, 18%), hsl(0, 0%, 15%));
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -10,15 +10,21 @@ import { ArrowRight, Award, Building2, Heart, MapPin, Instagram, Facebook } from
 import { useMemo } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
-import heroImage from "@/assets/hero-plaque.jpg";
+import heroImage from "@/assets/WhatsApp Image 2025-11-10 at 11.02.31 (1).jpeg";
 import awardPlaque from "@/assets/award-plaque.jpg";
 import inaugurationPlaque from "@/assets/inauguration-plaque.jpg";
 import gravePlaque from "@/assets/grave-plaque.jpg";
 import logo from "@/assets/logo.png";
 import acrylicVideo from "@/assets/fotosprincipal/WhatsApp Video 2025-11-10 at 11.13.56.mp4";
-import awardImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-10 at 10.40.05.jpeg";
-import inaugurationImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-10 at 10.38.24.jpeg";
+import homenagemImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-11 at 11.11.01.jpeg";
+import homenagemVideo from "@/assets/WhatsApp Video 2025-11-10 at 11.13.55.mp4";
+import awardImage from "@/assets/fotosprincipal/001122.png";
+import awardVideo from "@/assets/WhatsApp Video 2025-11-10 at 11.01.30.mp4";
+import inaugurationImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-11 at 11.18.44.jpeg";
+import inaugurationVideo from "@/assets/fotos carossel/WhatsApp Video 2025-11-10 at 11.14.03.mp4";
 import graveImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-10 at 10.40.06.jpeg";
+import graveVideo from "@/assets/WhatsApp Video 2025-11-10 at 11.01.28.mp4";
+import sobreVideo from "@/assets/WhatsApp Video 2025-11-10 at 10.56.37.mp4";
 
 // Imagens do carrossel
 import carouselImg1 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.36.20.jpeg";
@@ -43,6 +49,9 @@ import carouselImg19 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 
 import carouselImg20 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.44.07.jpeg";
 import carouselImg21 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 11.02.59.jpeg";
 import carouselImg22 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 11.03.01.jpeg";
+import carouselImg23 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.43.00 (1).jpeg";
+import carouselImg24 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.43.00.jpeg";
+import carouselImg25 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 11.02.31.jpeg";
 
 const Index = () => {
   const whatsappNumber = "552730735669";
@@ -54,7 +63,7 @@ const Index = () => {
     carouselImg6, carouselImg7, carouselImg8, carouselImg9, carouselImg10,
     carouselImg11, carouselImg12, carouselImg13, carouselImg14, carouselImg15,
     carouselImg16, carouselImg17, carouselImg18, carouselImg19, carouselImg20,
-    carouselImg21, carouselImg22
+    carouselImg21, carouselImg22, carouselImg23, carouselImg24, carouselImg25
   ];
 
   // Plugin de autoplay para o carrossel (velocidade aumentada - 2 segundos)
@@ -69,45 +78,45 @@ const Index = () => {
       <FloatingButtons />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
-        <div className="absolute inset-0 z-0">
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
             src={heroImage} 
             alt="Placa de homenagem elegante"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-[center_top] translate-y-[8%] sm:translate-y-[10%] scale-95 sm:scale-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/92 via-background/75 to-background sm:from-background/90 sm:via-background/70 sm:to-background"></div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4 md:space-y-6 fade-in py-16 md:py-0">
-          <img src={logo} alt="Vitória Placas" className="w-28 sm:w-32 md:w-48 lg:w-72 mx-auto mb-4 md:mb-6" />
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center space-y-3 sm:space-y-4 md:space-y-6 fade-in py-12 sm:py-16 md:py-0">
+          <img src={logo} alt="Vitória Placas" className="w-24 sm:w-28 md:w-40 lg:w-48 xl:w-72 mx-auto mb-3 sm:mb-4 md:mb-6" />
           
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-2 sm:px-4">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight px-2 sm:px-4">
             Transformamos Homenagens<br />
             <span className="text-gradient">em Eternas Memórias</span>
           </h1>
           
-          <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-6">
+          <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-muted-foreground max-w-3xl mx-auto px-3 sm:px-4 md:px-6 leading-relaxed">
             Placas personalizadas para homenagens, premiações, inaugurações e túmulos. 
             Cada detalhe pensado com respeito e elegância.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 md:pt-4 px-4">
+          <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 justify-center pt-3 sm:pt-4 md:pt-6 px-4">
             <Button 
               size="lg" 
-              className="text-sm sm:text-base md:text-lg gap-2 px-6 md:px-8 h-12 sm:h-auto w-full sm:w-auto min-w-[200px]"
+              className="text-xs sm:text-sm md:text-base lg:text-lg gap-2 px-5 sm:px-6 md:px-8 h-11 sm:h-12 md:h-auto w-full sm:w-auto min-w-[180px] sm:min-w-[200px] touch-manipulation"
               asChild
             >
               <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                 Solicitar Orçamento
-                <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
+                <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
               </a>
             </Button>
             
             <Button 
               size="lg" 
               variant="secondary"
-              className="text-sm sm:text-base md:text-lg px-6 md:px-8 h-12 sm:h-auto w-full sm:w-auto min-w-[200px]"
+              className="text-xs sm:text-sm md:text-base lg:text-lg px-5 sm:px-6 md:px-8 h-11 sm:h-12 md:h-auto w-full sm:w-auto min-w-[180px] sm:min-w-[200px] touch-manipulation"
               asChild
             >
               <a href="#produtos">
@@ -119,11 +128,13 @@ const Index = () => {
       </section>
 
       {/* Products Sections */}
-      <div id="produtos" className="bg-gradient-to-b from-background to-card">
+      <div id="produtos" className="bg-gradient-to-b from-background via-[hsl(0,0%,18%)] to-[hsl(0,0%,25%)]">
         <ProductSection
-          title="Homenagens em Estojo de Acrílico"
+          title="Placas de Homenagem"
           description="Nossas placas em acrílico são verdadeiras obras de arte. Com gravação em metal nobre e apresentação em estojo elegante, cada homenagem é única e inesquecível. Personalize com nomes, logotipos, datas e frases que eternizam momentos especiais."
-          videoSrc={acrylicVideo}
+          imageSrc={homenagemImage}
+          imageAlt="Placa de homenagem em estojo de acrílico"
+          backgroundVideo={homenagemVideo}
         />
 
         <ProductSection
@@ -131,6 +142,7 @@ const Index = () => {
           description="Reconheça conquistas e celebre vitórias com placas de premiação de alto padrão. Em metal, acrílico ou vidro, nossos troféus corporativos e esportivos transmitem prestígio, durabilidade e elegância para seus eventos mais importantes."
           imageSrc={awardImage}
           imageAlt="Placa de premiação corporativa"
+          backgroundVideo={awardVideo}
           reverse
         />
 
@@ -139,6 +151,7 @@ const Index = () => {
           description="Eternize momentos marcantes da história da sua empresa ou instituição. Nossas placas de inauguração em metal e vidro com gravação personalizada transformam marcos importantes em memórias permanentes que inspiram gerações."
           imageSrc={inaugurationImage}
           imageAlt="Placa de inauguração em aço inox"
+          backgroundVideo={inaugurationVideo}
         />
 
         <ProductSection
@@ -146,16 +159,17 @@ const Index = () => {
           description="Com respeito e sensibilidade, criamos placas funerárias que honram memórias e celebram vidas. Acabamento profissional em granito ou metal, gravações elegantes e duráveis que resistem ao tempo e preservam lembranças com dignidade."
           imageSrc={graveImage}
           imageAlt="Placa memorial para túmulo"
+          backgroundVideo={graveVideo}
           reverse
         />
       </div>
 
       {/* Gallery Section */}
-      <section className="py-10 sm:py-12 md:py-20 px-4 sm:px-6 bg-card">
+      <section className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-6 sm:mb-8 md:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold px-2">Galeria de Trabalhos</h2>
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-4 sm:mb-6 md:mb-10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Galeria de Trabalhos</h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-3 sm:px-4">
               Conheça alguns dos nossos projetos e veja a qualidade que entregamos em cada placa
             </p>
           </div>
@@ -169,17 +183,17 @@ const Index = () => {
             plugins={[autoplayPlugin]}
             className="w-full relative"
           >
-            <CarouselPrevious className="left-1 sm:left-2 md:left-4 z-10 bg-background/90 hover:bg-background h-8 w-8 sm:h-10 sm:w-10" />
-            <CarouselNext className="right-1 sm:right-2 md:right-4 z-10 bg-background/90 hover:bg-background h-8 w-8 sm:h-10 sm:w-10" />
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselPrevious className="left-1 sm:left-2 md:left-4 z-10 bg-background/95 hover:bg-background h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 touch-manipulation" />
+            <CarouselNext className="right-1 sm:right-2 md:right-4 z-10 bg-background/95 hover:bg-background h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 touch-manipulation" />
+            <CarouselContent className="-ml-2 sm:-ml-3 md:-ml-4">
               {carouselImages.map((img, idx) => (
-                <CarouselItem key={idx} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <Card className="overflow-hidden hover-lift cursor-pointer border-0 shadow-lg">
-                    <CardContent className="p-0">
+                <CarouselItem key={idx} className="pl-2 sm:pl-3 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <Card className="overflow-hidden hover-lift cursor-pointer border-0 shadow-lg h-full flex flex-col">
+                    <CardContent className="p-0 flex-1 flex items-center justify-center">
                       <img 
                         src={img} 
                         alt={`Trabalho ${idx + 1}`}
-                        className="w-full h-40 sm:h-48 md:h-64 lg:h-72 object-cover transition-transform duration-300 hover:scale-105"
+                        className="w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px] object-cover transition-transform duration-300 hover:scale-105"
                       />
                     </CardContent>
                   </Card>
@@ -188,8 +202,8 @@ const Index = () => {
             </CarouselContent>
           </Carousel>
 
-          <div className="text-center mt-8">
-            <Button variant="outline" size="lg" asChild>
+          <div className="text-center mt-6 sm:mt-8">
+            <Button variant="outline" size="lg" className="text-xs sm:text-sm md:text-base h-10 sm:h-11 md:h-auto px-4 sm:px-6 touch-manipulation" asChild>
               <a href="https://instagram.com/vitoriaplacasoficial" target="_blank" rel="noopener noreferrer">
                 Ver Mais no Instagram
               </a>
@@ -199,43 +213,54 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-10 sm:py-12 md:py-20 px-4 sm:px-6">
-        <div className="container mx-auto max-w-4xl text-center space-y-4 sm:space-y-6 md:space-y-8">
-          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold px-4">Sobre a Vitória Placas</h2>
+      <section id="sobre" className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <video 
+            src={sobreVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover object-left scale-90 sm:scale-80 md:scale-75 opacity-40 sm:opacity-45 md:opacity-50"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/75 sm:from-background/80 sm:via-background/50 sm:to-background/70"></div>
+        </div>
+        <div className="container mx-auto max-w-4xl text-center space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 relative z-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Sobre a Vitória Placas</h2>
           
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-4">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-2 sm:px-4">
             Há anos transformando homenagens em memórias eternas. A <strong>Vitória Placas</strong> é 
             especialista em comunicação visual e fabricação de placas personalizadas de alta qualidade.
           </p>
 
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-4">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-2 sm:px-4">
             Com fabricação própria e comprometimento com a excelência, atendemos todo o Espírito Santo 
             entregando produtos que combinam elegância, durabilidade e respeito. Cada placa é única, 
             pensada com carinho para eternizar seus momentos mais importantes.
           </p>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-6 md:pt-8">
-            <Card className="hover-lift">
-              <CardContent className="p-4 md:p-6 text-center space-y-2 md:space-y-3">
-                <Heart className="h-10 w-10 md:h-12 md:w-12 text-primary mx-auto" />
-                <h3 className="text-lg md:text-xl font-semibold">Feito com Cuidado</h3>
-                <p className="text-sm md:text-base text-muted-foreground">Cada detalhe pensado para eternizar memórias</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-6 md:pt-8">
+            <Card className="hover-lift bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
+              <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
+                <Heart className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold">Feito com Cuidado</h3>
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Cada detalhe pensado para eternizar memórias</p>
               </CardContent>
             </Card>
 
-            <Card className="hover-lift">
-              <CardContent className="p-4 md:p-6 text-center space-y-2 md:space-y-3">
-                <Award className="h-10 w-10 md:h-12 md:w-12 text-primary mx-auto" />
-                <h3 className="text-lg md:text-xl font-semibold">Alta Qualidade</h3>
-                <p className="text-sm md:text-base text-muted-foreground">Materiais nobres e acabamento premium</p>
+            <Card className="hover-lift bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
+              <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
+                <Award className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold">Alta Qualidade</h3>
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Materiais nobres e acabamento premium</p>
               </CardContent>
             </Card>
 
-            <Card className="hover-lift sm:col-span-2 md:col-span-1">
-              <CardContent className="p-4 md:p-6 text-center space-y-2 md:space-y-3">
-                <Building2 className="h-10 w-10 md:h-12 md:w-12 text-primary mx-auto" />
-                <h3 className="text-lg md:text-xl font-semibold">Fabricação Própria</h3>
-                <p className="text-sm md:text-base text-muted-foreground">Produção local com entrega em todo o ES</p>
+            <Card className="hover-lift sm:col-span-2 md:col-span-1 bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
+              <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
+                <Building2 className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold">Fabricação Própria</h3>
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Produção local com entrega em todo o ES</p>
               </CardContent>
             </Card>
           </div>
@@ -243,16 +268,16 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="depoimentos" className="py-10 sm:py-12 md:py-20 px-4 sm:px-6 bg-card">
+      <section id="depoimentos" className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,18%)] to-[hsl(0,0%,25%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-6 sm:mb-8 md:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold px-4">O Que Dizem Nossos Clientes</h2>
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground px-4">
+          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-4 sm:mb-6 md:mb-10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">O Que Dizem Nossos Clientes</h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground px-2 sm:px-4">
               A satisfação de quem confia em nosso trabalho
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             <TestimonialCard
               name="Maria Silva"
               role="Diretora de RH"
@@ -278,26 +303,26 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-10 sm:py-12 md:py-20 px-4 sm:px-6">
+      <section id="contato" className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-6 sm:mb-8 md:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold px-4">Solicite Seu Orçamento</h2>
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground px-4">
+          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-4 sm:mb-6 md:mb-10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Solicite Seu Orçamento</h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground px-2 sm:px-4">
               Preencha o formulário e entraremos em contato via WhatsApp
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-start">
             <ContactForm />
 
-            <div className="space-y-6 md:space-y-8">
-              <Card>
-                <CardContent className="p-4 md:p-6 space-y-4">
-                  <div className="flex items-start gap-3 md:gap-4">
-                    <MapPin className="h-5 w-5 md:h-6 md:w-6 text-primary mt-1 flex-shrink-0" />
+            <div className="space-y-4 sm:space-y-6 md:space-y-8">
+              <Card className="bg-background/95 backdrop-blur-sm">
+                <CardContent className="p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-semibold text-base md:text-lg mb-2">Nosso Endereço</h3>
-                      <p className="text-sm md:text-base text-muted-foreground">
+                      <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-1 sm:mb-2">Nosso Endereço</h3>
+                      <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
                         Rua Marcelino Rangel, 67<br />
                         Morada de Santa Fé<br />
                         Cariacica/ES
@@ -307,7 +332,7 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <div className="aspect-video rounded-lg overflow-hidden border border-border w-full h-[250px] md:h-auto">
+              <div className="aspect-video rounded-lg overflow-hidden border border-border w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-auto">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.9!2d-40.4!3d-20.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDE4JzAwLjAiUyA0MMKwMjQnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
                   width="100%"
@@ -325,43 +350,43 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-8 md:py-12 px-4">
+      <footer className="bg-gradient-to-b from-[hsl(0,0%,20%)] to-[hsl(0,0%,15%)] border-t border-border py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-4 sm:mb-6 md:mb-8">
             <div className="sm:col-span-2 md:col-span-1">
-              <img src={logo} alt="Vitória Placas" className="h-16 md:h-20 mb-3 md:mb-4" />
-              <p className="text-sm md:text-base text-muted-foreground">
+              <img src={logo} alt="Vitória Placas" className="h-12 sm:h-14 md:h-16 lg:h-20 mb-2 sm:mb-3 md:mb-4" />
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
                 Transformando homenagens em eternas memórias desde sempre.
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Contato</h4>
-              <div className="space-y-2 text-sm md:text-base text-muted-foreground">
-                <p>WhatsApp: (27) 3073-5669</p>
+              <h4 className="font-semibold mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base">Contato</h4>
+              <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm md:text-base text-muted-foreground">
+                <p className="break-words">WhatsApp: (27) 3073-5669</p>
                 <p className="break-words">Email: compras@vitoriaplacas.com.br</p>
-                <p>CNPJ: 56.415.178/0001-58</p>
+                <p className="break-words">CNPJ: 56.415.178/0001-58</p>
               </div>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Redes Sociais</h4>
-              <div className="flex gap-3 md:gap-4">
-                <Button variant="outline" size="icon" asChild>
+              <h4 className="font-semibold mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base">Redes Sociais</h4>
+              <div className="flex gap-2 sm:gap-3 md:gap-4">
+                <Button variant="outline" size="icon" className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10" asChild>
                   <a href="https://instagram.com/vitoriaplacasoficial" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                    <Instagram className="h-4 w-4 md:h-5 md:w-5" />
+                    <Instagram className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
                   </a>
                 </Button>
-                <Button variant="outline" size="icon" asChild>
+                <Button variant="outline" size="icon" className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10" asChild>
                   <a href="https://facebook.com/vitoriaplacasoficial" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <Facebook className="h-4 w-4 md:h-5 md:w-5" />
+                    <Facebook className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
                   </a>
                 </Button>
               </div>
             </div>
           </div>
 
-          <div className="pt-6 md:pt-8 border-t border-border text-center text-sm md:text-base text-muted-foreground">
+          <div className="pt-4 sm:pt-6 md:pt-8 border-t border-border text-center text-xs sm:text-sm md:text-base text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} Vitória Placas. Todos os direitos reservados.</p>
           </div>
         </div>

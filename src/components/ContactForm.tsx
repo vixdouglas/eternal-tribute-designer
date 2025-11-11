@@ -33,36 +33,36 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6 max-w-2xl mx-auto">
-      <div className="space-y-2">
-        <Label htmlFor="name" className="text-sm sm:text-base">Nome Completo</Label>
+    <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 max-w-2xl mx-auto">
+      <div className="space-y-1.5 sm:space-y-2">
+        <Label htmlFor="name" className="text-xs sm:text-sm md:text-base">Nome Completo</Label>
         <Input
           id="name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           placeholder="Digite seu nome"
-          className="text-base sm:text-base h-12 sm:h-auto"
+          className="text-sm sm:text-base h-11 sm:h-12 md:h-auto"
           required
         />
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="phone" className="text-sm sm:text-base">Telefone/WhatsApp</Label>
+      <div className="space-y-1.5 sm:space-y-2">
+        <Label htmlFor="phone" className="text-xs sm:text-sm md:text-base">Telefone/WhatsApp</Label>
         <Input
           id="phone"
           type="tel"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           placeholder="(27) 99999-9999"
-          className="text-base sm:text-base h-12 sm:h-auto"
+          className="text-sm sm:text-base h-11 sm:h-12 md:h-auto"
           required
         />
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="plaqueType" className="text-sm sm:text-base">Tipo de Placa</Label>
+      <div className="space-y-1.5 sm:space-y-2">
+        <Label htmlFor="plaqueType" className="text-xs sm:text-sm md:text-base">Tipo de Placa</Label>
         <Select value={formData.plaqueType} onValueChange={(value) => setFormData({ ...formData, plaqueType: value })}>
-          <SelectTrigger id="plaqueType" className="text-base sm:text-base h-12 sm:h-auto">
+          <SelectTrigger id="plaqueType" className="text-sm sm:text-base h-11 sm:h-12 md:h-auto">
             <SelectValue placeholder="Selecione o tipo de placa" />
           </SelectTrigger>
           <SelectContent>
@@ -75,21 +75,21 @@ const ContactForm = () => {
         </Select>
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="message" className="text-sm sm:text-base">Mensagem</Label>
+      <div className="space-y-1.5 sm:space-y-2">
+        <Label htmlFor="message" className="text-xs sm:text-sm md:text-base">Mensagem</Label>
         <Textarea
           id="message"
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           placeholder="Descreva o que você precisa..."
           rows={5}
-          className="text-base sm:text-base resize-none min-h-[120px]"
+          className="text-sm sm:text-base resize-none min-h-[110px] sm:min-h-[120px]"
           required
         />
       </div>
 
-      <Button type="submit" size="lg" className="w-full gap-2 text-base sm:text-base h-12 sm:h-auto touch-manipulation">
-        <Send className="h-5 w-5" />
+      <Button type="submit" size="lg" className="w-full gap-2 text-xs sm:text-sm md:text-base h-11 sm:h-12 md:h-auto touch-manipulation">
+        <Send className="h-4 w-4 sm:h-5 sm:w-5" />
         Enviar Mensagem via WhatsApp
       </Button>
     </form>
