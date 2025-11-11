@@ -14,6 +14,7 @@ import awardPlaque from "@/assets/award-plaque.jpg";
 import inaugurationPlaque from "@/assets/inauguration-plaque.jpg";
 import gravePlaque from "@/assets/grave-plaque.jpg";
 import logo from "@/assets/logo.png";
+import heroImage from "@/assets/WhatsApp Image 2025-11-10 at 11.02.31 (1).jpeg";
 import acrylicVideo from "@/assets/fotosprincipal/WhatsApp Video 2025-11-10 at 11.13.56.mp4";
 import homenagemImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-11 at 11.11.01.jpeg";
 import homenagemVideo from "@/assets/WhatsApp Video 2025-11-10 at 11.13.55.mp4";
@@ -24,6 +25,9 @@ import inaugurationVideo from "@/assets/fotos carossel/WhatsApp Video 2025-11-10
 import graveImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-10 at 10.40.06.jpeg";
 import graveVideo from "@/assets/WhatsApp Video 2025-11-10 at 11.01.28.mp4";
 import sobreVideo from "@/assets/WhatsApp Video 2025-11-10 at 10.56.37.mp4";
+import letreiroImage from "@/assets/WhatsApp Image 2025-11-10 at 10.37.05.jpeg";
+import letreiroVideo from "@/assets/WhatsApp Video 2025-11-10 at 11.13.55.mp4";
+import homenagemBackgroundVideo from "@/assets/WhatsApp Video 2025-11-10 at 11.13.57.mp4";
 
 // Imagens do carrossel
 import carouselImg1 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.36.20.jpeg";
@@ -80,7 +84,7 @@ const Index = () => {
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
-            src={awardPlaque} 
+            src={heroImage} 
             alt="Placa de homenagem elegante"
             className="w-full h-full object-cover object-center scale-100 sm:scale-100"
           />
@@ -133,7 +137,10 @@ const Index = () => {
           description="Nossas placas em acrílico são verdadeiras obras de arte. Com gravação em metal nobre e apresentação em estojo elegante, cada homenagem é única e inesquecível. Personalize com nomes, logotipos, datas e frases que eternizam momentos especiais."
           imageSrc={homenagemImage}
           imageAlt="Placa de homenagem em estojo de acrílico"
-          backgroundVideo={homenagemVideo}
+          backgroundVideo={homenagemBackgroundVideo}
+          backgroundVideoOffset="50%"
+          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+          imageContainerClassName="flex justify-center items-center"
         />
 
         <ProductSection
@@ -143,6 +150,8 @@ const Index = () => {
           imageAlt="Placa de premiação corporativa"
           backgroundVideo={awardVideo}
           reverse
+          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+          imageContainerClassName="flex justify-center items-center"
         />
 
         <ProductSection
@@ -151,6 +160,8 @@ const Index = () => {
           imageSrc={inaugurationImage}
           imageAlt="Placa de inauguração em aço inox"
           backgroundVideo={inaugurationVideo}
+          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+          imageContainerClassName="flex justify-center items-center"
         />
 
         <ProductSection
@@ -160,11 +171,24 @@ const Index = () => {
           imageAlt="Placa memorial para túmulo"
           backgroundVideo={graveVideo}
           reverse
+          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+          imageContainerClassName="flex justify-center items-center"
+        />
+
+        <ProductSection
+          title="Placas de Letreiro"
+          subtitle="Sinalização visual profissional para identidade e comunicação empresarial. Valorize cada detalhe da sua marca."
+          description="Nossas placas de letreiro personalizadas — ideais para portas, mesas, departamentos e áreas internas — reforçam a identidade visual da sua empresa com design elegante, materiais duráveis e acabamento impecável. Transforme ambientes corporativos em espaços organizados, sofisticados e alinhados à essência da sua marca."
+          imageSrc={letreiroImage}
+          imageAlt="Placa de letreiro em aço inox"
+          backgroundVideo={letreiroVideo}
+          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+          imageContainerClassName="flex justify-center items-center"
         />
       </div>
 
       {/* Gallery Section */}
-      <section className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
+      <section className="py-6 sm:py-8 md:py-10 lg:py-16 px-3 sm:px-4 md:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-4 sm:mb-6 md:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Galeria de Trabalhos</h2>
@@ -178,24 +202,27 @@ const Index = () => {
               align: "start",
               loop: true,
               dragFree: true,
+              containScroll: "trimSnaps",
+              slidesToScroll: 1,
             }}
             plugins={[autoplayPlugin]}
             className="w-full relative"
           >
-            <CarouselPrevious className="left-1 sm:left-2 md:left-4 z-10 bg-background/95 hover:bg-background h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 touch-manipulation" />
-            <CarouselNext className="right-1 sm:right-2 md:right-4 z-10 bg-background/95 hover:bg-background h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 touch-manipulation" />
-            <CarouselContent className="-ml-2 sm:-ml-3 md:-ml-4">
+            <CarouselPrevious className="left-0.5 sm:left-1 md:left-2 lg:left-4 z-20 bg-background/98 hover:bg-background/100 active:bg-background border border-primary/30 h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 touch-manipulation active:scale-90 shadow-md hover:shadow-lg transition-all" />
+            <CarouselNext className="right-0.5 sm:right-1 md:right-2 lg:right-4 z-20 bg-background/98 hover:bg-background/100 active:bg-background border border-primary/30 h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 touch-manipulation active:scale-90 shadow-md hover:shadow-lg transition-all" />
+            <CarouselContent className="-ml-1.5 sm:-ml-2 md:-ml-3 lg:-ml-4 touch-pan-x">
               {carouselImages.map((img, idx) => (
-                <CarouselItem key={idx} className="pl-2 sm:pl-3 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <Card className="overflow-hidden hover-lift cursor-pointer border-0 shadow-lg h-full flex flex-col">
-                    <CardContent className="p-0 flex-1 flex items-center justify-center">
-                      <img 
-                        src={img} 
-                        alt={`Trabalho ${idx + 1}`}
-                        className="w-full h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px] object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                    </CardContent>
-                  </Card>
+                <CarouselItem key={idx} className="pl-1.5 sm:pl-2 md:pl-3 lg:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 flex items-center justify-center py-2 sm:py-3">
+                  <div className="w-full flex items-center justify-center h-full min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px]">
+                    <img 
+                      src={img} 
+                      alt={`Trabalho ${idx + 1}`}
+                      className="max-w-[95%] max-h-[260px] sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px] xl:max-h-[450px] w-auto h-auto object-contain cursor-pointer active:scale-95 hover:scale-105 transition-transform duration-200 block touch-manipulation select-none"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -214,14 +241,21 @@ const Index = () => {
       {/* About Section */}
       <section id="sobre" className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <video 
-            src={sobreVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover object-left scale-90 sm:scale-80 md:scale-75 opacity-40 sm:opacity-45 md:opacity-50"
-          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <video 
+              src={sobreVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-contain opacity-40 sm:opacity-45 md:opacity-50"
+              style={{ 
+                maxWidth: '60%', 
+                maxHeight: '60%',
+                objectFit: 'contain'
+              }}
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/75 sm:from-background/80 sm:via-background/50 sm:to-background/70"></div>
         </div>
         <div className="container mx-auto max-w-4xl text-center space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 relative z-10">

@@ -1,0 +1,38 @@
+═══════════════════════════════════════════════════════════════
+  INSTRUÇÕES PARA ACESSAR O PROJETO LOCALMENTE
+═══════════════════════════════════════════════════════════════
+
+O servidor de desenvolvimento está configurado para rodar na porta 3000.
+
+📍 ACESSO:
+   • Abra seu navegador (Chrome, Firefox, Edge, etc.)
+   • Digite na barra de endereços:
+     
+     http://localhost:3000
+     
+   OU
+     
+     http://127.0.0.1:3000
+
+🚀 PARA INICIAR O SERVIDOR:
+   1. Abra o PowerShell ou Terminal
+   2. Navegue até a pasta do projeto:
+      cd "C:\Users\Joab\Desktop\Anderson Placas\eternal-tribute-designer"
+   3. Execute o comando:
+      npm run dev
+
+🛑 PARA PARAR O SERVIDOR:
+   Pressione Ctrl + C no terminal
+
+⚠️ PROBLEMAS COMUNS:
+   • Se a porta 3000 estiver ocupada, o servidor tentará usar outra porta
+   • Verifique se o Node.js está instalado: node --version
+   • Verifique se as dependências estão instaladas: npm install
+   • Se houver erro, verifique o terminal para mensagens de erro
+
+📝 NOTA:
+   O servidor deve estar rodando para que você possa visualizar o projeto.
+   Qualquer alteração nos arquivos será refletida automaticamente no navegador.
+
+═══════════════════════════════════════════════════════════════
+
