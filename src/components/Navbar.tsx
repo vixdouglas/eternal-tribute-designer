@@ -8,7 +8,7 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const whatsappNumber = "5527307356XX";
+  const whatsappNumber = "552730735669";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para placas personalizadas.");
 
   useEffect(() => {
@@ -85,39 +85,39 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
-            <div className="flex flex-col py-4 space-y-4">
+            <div className="flex flex-col py-4 space-y-2">
               <a 
                 href="#produtos" 
-                className="px-4 py-2 text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                className="px-4 py-3 text-base text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
                 onClick={closeMobileMenu}
               >
                 Produtos
               </a>
               <a 
                 href="#sobre" 
-                className="px-4 py-2 text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                className="px-4 py-3 text-base text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
                 onClick={closeMobileMenu}
               >
                 Sobre
               </a>
               <a 
                 href="#depoimentos" 
-                className="px-4 py-2 text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                className="px-4 py-3 text-base text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
                 onClick={closeMobileMenu}
               >
                 Depoimentos
               </a>
               <a 
                 href="#contato" 
-                className="px-4 py-2 text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                className="px-4 py-3 text-base text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
                 onClick={closeMobileMenu}
               >
                 Contato
               </a>
               <div className="px-4 pt-2">
                 <Button 
-                  size="sm"
-                  className="w-full gap-2"
+                  size="lg"
+                  className="w-full gap-2 h-12 touch-manipulation"
                   asChild
                 >
                   <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">

@@ -1,21 +1,67 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import Navbar from "@/components/Navbar";
 import FloatingButtons from "@/components/FloatingButtons";
 import ProductSection from "@/components/ProductSection";
 import TestimonialCard from "@/components/TestimonialCard";
 import ContactForm from "@/components/ContactForm";
 import { ArrowRight, Award, Building2, Heart, MapPin, Instagram, Facebook } from "lucide-react";
+import { useMemo } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 import heroImage from "@/assets/hero-plaque.jpg";
 import awardPlaque from "@/assets/award-plaque.jpg";
 import inaugurationPlaque from "@/assets/inauguration-plaque.jpg";
 import gravePlaque from "@/assets/grave-plaque.jpg";
 import logo from "@/assets/logo.png";
+import acrylicVideo from "@/assets/fotosprincipal/WhatsApp Video 2025-11-10 at 11.13.56.mp4";
+import awardImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-10 at 10.40.05.jpeg";
+import inaugurationImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-10 at 10.38.24.jpeg";
+import graveImage from "@/assets/fotosprincipal/WhatsApp Image 2025-11-10 at 10.40.06.jpeg";
+
+// Imagens do carrossel
+import carouselImg1 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.36.20.jpeg";
+import carouselImg2 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.36.21 (1).jpeg";
+import carouselImg3 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.36.21 (2).jpeg";
+import carouselImg4 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.36.21 (3).jpeg";
+import carouselImg5 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.36.21.jpeg";
+import carouselImg6 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.37.05 (1).jpeg";
+import carouselImg7 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.37.05.jpeg";
+import carouselImg8 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.38.22 (1).jpeg";
+import carouselImg9 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.38.22 (2).jpeg";
+import carouselImg10 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.38.22.jpeg";
+import carouselImg11 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.38.23 (1).jpeg";
+import carouselImg12 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.38.23.jpeg";
+import carouselImg13 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.40.06.jpeg";
+import carouselImg14 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.42.55 (1).jpeg";
+import carouselImg15 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.42.55.jpeg";
+import carouselImg16 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.42.56 (1).jpeg";
+import carouselImg17 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.42.56.jpeg";
+import carouselImg18 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.44.07 (1).jpeg";
+import carouselImg19 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.44.07 (2).jpeg";
+import carouselImg20 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 10.44.07.jpeg";
+import carouselImg21 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 11.02.59.jpeg";
+import carouselImg22 from "@/assets/fotos carossel/WhatsApp Image 2025-11-10 at 11.03.01.jpeg";
 
 const Index = () => {
-  const whatsappNumber = "5527307356XX";
+  const whatsappNumber = "552730735669";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para placas personalizadas.");
+
+  // Array com todas as imagens do carrossel
+  const carouselImages = [
+    carouselImg1, carouselImg2, carouselImg3, carouselImg4, carouselImg5,
+    carouselImg6, carouselImg7, carouselImg8, carouselImg9, carouselImg10,
+    carouselImg11, carouselImg12, carouselImg13, carouselImg14, carouselImg15,
+    carouselImg16, carouselImg17, carouselImg18, carouselImg19, carouselImg20,
+    carouselImg21, carouselImg22
+  ];
+
+  // Plugin de autoplay para o carrossel (velocidade aumentada - 2 segundos)
+  const autoplayPlugin = useMemo(
+    () => Autoplay({ delay: 2000, stopOnInteraction: false }),
+    []
+  );
 
   return (
     <main className="min-h-screen">
@@ -23,7 +69,7 @@ const Index = () => {
       <FloatingButtons />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-0">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
@@ -33,23 +79,23 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 text-center space-y-4 md:space-y-6 fade-in py-12 md:py-0">
-          <img src={logo} alt="Vitória Placas" className="w-32 md:w-48 lg:w-72 mx-auto mb-4" />
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4 md:space-y-6 fade-in py-16 md:py-0">
+          <img src={logo} alt="Vitória Placas" className="w-28 sm:w-32 md:w-48 lg:w-72 mx-auto mb-4 md:mb-6" />
           
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight px-2 sm:px-4">
             Transformamos Homenagens<br />
             <span className="text-gradient">em Eternas Memórias</span>
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto px-4">
+          <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto px-4 sm:px-6">
             Placas personalizadas para homenagens, premiações, inaugurações e túmulos. 
             Cada detalhe pensado com respeito e elegância.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 md:pt-4 px-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 md:pt-4 px-4">
             <Button 
               size="lg" 
-              className="text-base md:text-lg gap-2 px-6 md:px-8 w-full sm:w-auto"
+              className="text-sm sm:text-base md:text-lg gap-2 px-6 md:px-8 h-12 sm:h-auto w-full sm:w-auto min-w-[200px]"
               asChild
             >
               <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
@@ -61,7 +107,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="secondary"
-              className="text-base md:text-lg px-6 md:px-8 w-full sm:w-auto"
+              className="text-sm sm:text-base md:text-lg px-6 md:px-8 h-12 sm:h-auto w-full sm:w-auto min-w-[200px]"
               asChild
             >
               <a href="#produtos">
@@ -77,14 +123,13 @@ const Index = () => {
         <ProductSection
           title="Homenagens em Estojo de Acrílico"
           description="Nossas placas em acrílico são verdadeiras obras de arte. Com gravação em metal nobre e apresentação em estojo elegante, cada homenagem é única e inesquecível. Personalize com nomes, logotipos, datas e frases que eternizam momentos especiais."
-          imageSrc={heroImage}
-          imageAlt="Placa de homenagem em estojo de acrílico"
+          videoSrc={acrylicVideo}
         />
 
         <ProductSection
           title="Placas de Premiação"
           description="Reconheça conquistas e celebre vitórias com placas de premiação de alto padrão. Em metal, acrílico ou vidro, nossos troféus corporativos e esportivos transmitem prestígio, durabilidade e elegância para seus eventos mais importantes."
-          imageSrc={awardPlaque}
+          imageSrc={awardImage}
           imageAlt="Placa de premiação corporativa"
           reverse
         />
@@ -92,42 +137,56 @@ const Index = () => {
         <ProductSection
           title="Placas de Inauguração"
           description="Eternize momentos marcantes da história da sua empresa ou instituição. Nossas placas de inauguração em metal e vidro com gravação personalizada transformam marcos importantes em memórias permanentes que inspiram gerações."
-          imageSrc={inaugurationPlaque}
+          imageSrc={inaugurationImage}
           imageAlt="Placa de inauguração em aço inox"
         />
 
         <ProductSection
           title="Placas para Túmulos"
           description="Com respeito e sensibilidade, criamos placas funerárias que honram memórias e celebram vidas. Acabamento profissional em granito ou metal, gravações elegantes e duráveis que resistem ao tempo e preservam lembranças com dignidade."
-          imageSrc={gravePlaque}
+          imageSrc={graveImage}
           imageAlt="Placa memorial para túmulo"
           reverse
         />
       </div>
 
       {/* Gallery Section */}
-      <section className="py-12 md:py-20 px-4 bg-card">
+      <section className="py-10 sm:py-12 md:py-20 px-4 sm:px-6 bg-card">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-3 md:space-y-4 mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Galeria de Trabalhos</h2>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold px-2">Galeria de Trabalhos</h2>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Conheça alguns dos nossos projetos e veja a qualidade que entregamos em cada placa
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4">
-            {[awardPlaque, inaugurationPlaque, gravePlaque, heroImage, awardPlaque, inaugurationPlaque].map((img, idx) => (
-              <Card key={idx} className="overflow-hidden hover-lift cursor-pointer">
-                <CardContent className="p-0">
-                  <img 
-                    src={img} 
-                    alt={`Trabalho ${idx + 1}`}
-                    className="w-full h-32 sm:h-40 md:h-48 lg:h-64 object-cover"
-                  />
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+            }}
+            plugins={[autoplayPlugin]}
+            className="w-full relative"
+          >
+            <CarouselPrevious className="left-1 sm:left-2 md:left-4 z-10 bg-background/90 hover:bg-background h-8 w-8 sm:h-10 sm:w-10" />
+            <CarouselNext className="right-1 sm:right-2 md:right-4 z-10 bg-background/90 hover:bg-background h-8 w-8 sm:h-10 sm:w-10" />
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {carouselImages.map((img, idx) => (
+                <CarouselItem key={idx} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <Card className="overflow-hidden hover-lift cursor-pointer border-0 shadow-lg">
+                    <CardContent className="p-0">
+                      <img 
+                        src={img} 
+                        alt={`Trabalho ${idx + 1}`}
+                        className="w-full h-40 sm:h-48 md:h-64 lg:h-72 object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
 
           <div className="text-center mt-8">
             <Button variant="outline" size="lg" asChild>
@@ -140,16 +199,16 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-12 md:py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center space-y-6 md:space-y-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-4">Sobre a Vitória Placas</h2>
+      <section id="sobre" className="py-10 sm:py-12 md:py-20 px-4 sm:px-6">
+        <div className="container mx-auto max-w-4xl text-center space-y-4 sm:space-y-6 md:space-y-8">
+          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold px-4">Sobre a Vitória Placas</h2>
           
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed px-4">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-4">
             Há anos transformando homenagens em memórias eternas. A <strong>Vitória Placas</strong> é 
             especialista em comunicação visual e fabricação de placas personalizadas de alta qualidade.
           </p>
 
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed px-4">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-4">
             Com fabricação própria e comprometimento com a excelência, atendemos todo o Espírito Santo 
             entregando produtos que combinam elegância, durabilidade e respeito. Cada placa é única, 
             pensada com carinho para eternizar seus momentos mais importantes.
@@ -184,11 +243,11 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="depoimentos" className="py-12 md:py-20 px-4 bg-card">
+      <section id="depoimentos" className="py-10 sm:py-12 md:py-20 px-4 sm:px-6 bg-card">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-3 md:space-y-4 mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-4">O Que Dizem Nossos Clientes</h2>
-            <p className="text-base md:text-lg text-muted-foreground px-4">
+          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold px-4">O Que Dizem Nossos Clientes</h2>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground px-4">
               A satisfação de quem confia em nosso trabalho
             </p>
           </div>
@@ -219,11 +278,11 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-12 md:py-20 px-4">
+      <section id="contato" className="py-10 sm:py-12 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-3 md:space-y-4 mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-4">Solicite Seu Orçamento</h2>
-            <p className="text-base md:text-lg text-muted-foreground px-4">
+          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold px-4">Solicite Seu Orçamento</h2>
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground px-4">
               Preencha o formulário e entraremos em contato via WhatsApp
             </p>
           </div>
@@ -279,7 +338,7 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Contato</h4>
               <div className="space-y-2 text-sm md:text-base text-muted-foreground">
-                <p>WhatsApp: (27) 3073-56XX</p>
+                <p>WhatsApp: (27) 3073-5669</p>
                 <p className="break-words">Email: compras@vitoriaplacas.com.br</p>
                 <p>CNPJ: 56.415.178/0001-58</p>
               </div>
