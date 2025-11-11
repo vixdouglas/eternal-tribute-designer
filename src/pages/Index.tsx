@@ -86,7 +86,7 @@ const Index = () => {
           <img 
             src={heroImage} 
             alt="Placa de homenagem elegante"
-            className="w-full h-full object-cover object-center scale-100 sm:scale-100"
+            className="w-full h-full object-cover object-[center_20%] sm:object-[center_25%] md:object-[center_30%] lg:object-[center_35%] scale-100 sm:scale-100"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/92 via-background/75 to-background sm:from-background/90 sm:via-background/70 sm:to-background"></div>
         </div>
@@ -131,61 +131,65 @@ const Index = () => {
       </section>
 
       {/* Products Sections */}
-      <div id="produtos" className="bg-gradient-to-b from-background via-[hsl(0,0%,18%)] to-[hsl(0,0%,25%)]">
-        <ProductSection
-          title="Placas de Homenagem"
-          description="Nossas placas em acrílico são verdadeiras obras de arte. Com gravação em metal nobre e apresentação em estojo elegante, cada homenagem é única e inesquecível. Personalize com nomes, logotipos, datas e frases que eternizam momentos especiais."
-          imageSrc={homenagemImage}
-          imageAlt="Placa de homenagem em estojo de acrílico"
-          backgroundVideo={homenagemBackgroundVideo}
-          backgroundVideoOffset="50%"
-          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-          imageContainerClassName="flex justify-center items-center"
-        />
+      <ProductSection
+        id="produtos"
+        title="Placas de Homenagem"
+        description="Nossas placas em acrílico são verdadeiras obras de arte. Com gravação em metal nobre e apresentação em estojo elegante, cada homenagem é única e inesquecível. Personalize com nomes, logotipos, datas e frases que eternizam momentos especiais."
+        imageSrc={homenagemImage}
+        imageAlt="Placa de homenagem em estojo de acrílico"
+        backgroundVideo={homenagemBackgroundVideo}
+        backgroundVideoOffset="25%"
+        backgroundVideoScale="scale-110 sm:scale-105 md:scale-100"
+        backgroundVideoPosition="center"
+        imageRightAbsolute={true}
+        textCenter={true}
+        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+      />
 
-        <ProductSection
-          title="Placas de Premiação"
-          description="Reconheça conquistas e celebre vitórias com placas de premiação de alto padrão. Em metal, acrílico ou vidro, nossos troféus corporativos e esportivos transmitem prestígio, durabilidade e elegância para seus eventos mais importantes."
-          imageSrc={awardImage}
-          imageAlt="Placa de premiação corporativa"
-          backgroundVideo={awardVideo}
-          reverse
-          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-          imageContainerClassName="flex justify-center items-center"
-        />
+      <ProductSection
+        title="Placas de Premiação"
+        description="Reconheça conquistas e celebre vitórias com placas de premiação de alto padrão. Em metal, acrílico ou vidro, nossos troféus corporativos e esportivos transmitem prestígio, durabilidade e elegância para seus eventos mais importantes."
+        imageSrc={awardImage}
+        imageAlt="Placa de premiação corporativa"
+        backgroundVideo={awardVideo}
+        backgroundVideoOffset="40%"
+        backgroundVideoPosition="center"
+        reverse
+        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+        imageContainerClassName="flex justify-center items-center"
+      />
 
-        <ProductSection
-          title="Placas de Inauguração"
-          description="Eternize momentos marcantes da história da sua empresa ou instituição. Nossas placas de inauguração em metal e vidro com gravação personalizada transformam marcos importantes em memórias permanentes que inspiram gerações."
-          imageSrc={inaugurationImage}
-          imageAlt="Placa de inauguração em aço inox"
-          backgroundVideo={inaugurationVideo}
-          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-          imageContainerClassName="flex justify-center items-center"
-        />
+      <ProductSection
+        title="Placas de Inauguração"
+        description="Eternize momentos marcantes da história da sua empresa ou instituição. Nossas placas de inauguração em metal e vidro com gravação personalizada transformam marcos importantes em memórias permanentes que inspiram gerações."
+        imageSrc={inaugurationImage}
+        imageAlt="Placa de inauguração em aço inox"
+        backgroundVideo={inaugurationVideo}
+        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+        imageContainerClassName="flex justify-center items-center"
+      />
 
-        <ProductSection
-          title="Placas para Túmulos"
-          description="Com respeito e sensibilidade, criamos placas funerárias que honram memórias e celebram vidas. Acabamento profissional em granito ou metal, gravações elegantes e duráveis que resistem ao tempo e preservam lembranças com dignidade."
-          imageSrc={graveImage}
-          imageAlt="Placa memorial para túmulo"
-          backgroundVideo={graveVideo}
-          reverse
-          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-          imageContainerClassName="flex justify-center items-center"
-        />
+      <ProductSection
+        title="Placas para Túmulos"
+        description="Com respeito e sensibilidade, criamos placas funerárias que honram memórias e celebram vidas. Acabamento profissional em granito ou metal, gravações elegantes e duráveis que resistem ao tempo e preservam lembranças com dignidade."
+        imageSrc={graveImage}
+        imageAlt="Placa memorial para túmulo"
+        backgroundVideo={graveVideo}
+        reverse
+        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+        imageContainerClassName="flex justify-center items-center"
+      />
 
-        <ProductSection
-          title="Placas de Letreiro"
-          subtitle="Sinalização visual profissional para identidade e comunicação empresarial. Valorize cada detalhe da sua marca."
-          description="Nossas placas de letreiro personalizadas — ideais para portas, mesas, departamentos e áreas internas — reforçam a identidade visual da sua empresa com design elegante, materiais duráveis e acabamento impecável. Transforme ambientes corporativos em espaços organizados, sofisticados e alinhados à essência da sua marca."
-          imageSrc={letreiroImage}
-          imageAlt="Placa de letreiro em aço inox"
-          backgroundVideo={letreiroVideo}
-          imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-          imageContainerClassName="flex justify-center items-center"
-        />
-      </div>
+      <ProductSection
+        title="Placas de Letreiro"
+        subtitle="Sinalização visual profissional para identidade e comunicação empresarial. Valorize cada detalhe da sua marca."
+        description="Nossas placas de letreiro personalizadas — ideais para portas, mesas, departamentos e áreas internas — reforçam a identidade visual da sua empresa com design elegante, materiais duráveis e acabamento impecável. Transforme ambientes corporativos em espaços organizados, sofisticados e alinhados à essência da sua marca."
+        imageSrc={letreiroImage}
+        imageAlt="Placa de letreiro em aço inox"
+        backgroundVideo={letreiroVideo}
+        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+        imageContainerClassName="flex justify-center items-center"
+      />
 
       {/* Gallery Section */}
       <section className="py-6 sm:py-8 md:py-10 lg:py-16 px-3 sm:px-4 md:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
