@@ -17,23 +17,27 @@ interface ProductSectionProps {
   textCenter?: boolean;
   textClassName?: string;
   imageRightAbsolute?: boolean;
+  imageTopRight?: boolean;
+  imageBottomRight?: boolean;
+  imageLeft?: boolean;
+  imageRight?: boolean;
 }
 
-const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, videoSrc, backgroundVideo, reverse = false, imageClassName, imageContainerClassName, backgroundVideoScale, backgroundVideoPosition, backgroundVideoOffset, textCenter = false, textClassName, imageRightAbsolute = false }: ProductSectionProps) => {
+const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, videoSrc, backgroundVideo, reverse = false, imageClassName, imageContainerClassName, backgroundVideoScale, backgroundVideoPosition, backgroundVideoOffset, textCenter = false, textClassName, imageRightAbsolute = false, imageTopRight = false, imageBottomRight = false, imageLeft = false, imageRight = false }: ProductSectionProps) => {
   return (
-    <section id={id} className={`py-10 sm:py-12 md:py-16 px-4 sm:px-6 relative overflow-hidden bg-[hsl(0,0%,18%)]`}>
+    <section id={id} className={`min-h-[400px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] py-8 sm:py-10 md:py-14 lg:py-16 px-4 sm:px-6 relative overflow-x-hidden bg-[hsl(0,0%,18%)]`}>
       {backgroundVideo && (
         <>
-          <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute inset-0 z-0 overflow-hidden" style={{ left: '50%', transform: 'translateX(-50%)', width: '100vw' }}>
             {backgroundVideoPosition === 'center-top' ? (
-              <div className="absolute top-0 left-0 right-0 h-1/2 flex items-start justify-center overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1/2 flex items-start justify-center overflow-hidden w-full">
                 <video 
                   src={backgroundVideo}
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover object-center object-top opacity-40 sm:opacity-45 md:opacity-50"
+                  className="w-full h-full object-cover object-center object-top opacity-50 sm:opacity-55 md:opacity-60 lg:opacity-65"
                 />
               </div>
             ) : (
@@ -43,7 +47,7 @@ const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, 
                 loop
                 muted
                 playsInline
-                className={`w-full h-full object-cover ${backgroundVideoScale || 'scale-90 sm:scale-85 md:scale-75'} opacity-40 sm:opacity-45 md:opacity-50`}
+                className={`w-full h-full object-cover opacity-50 sm:opacity-55 md:opacity-60 lg:opacity-65 ${imageLeft || imageRight ? 'scale-75' : ''}`}
                 style={
                   backgroundVideoOffset 
                     ? { 
@@ -56,17 +60,187 @@ const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, 
               />
             )}
           </div>
-          {/* Gradiente alinhado com o container */}
-          <div className="absolute inset-0 z-0 flex items-center justify-center">
-            <div className="container mx-auto max-w-5xl h-full relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/75 sm:from-background/80 sm:via-background/50 sm:to-background/70"></div>
-            </div>
-          </div>
         </>
       )}
 
       <div className={`container mx-auto max-w-5xl relative z-10`}>
-        {imageRightAbsolute ? (
+        {imageRight ? (
+          // Layout com imagem totalmente à direita, texto no início
+          <div className={`${textClassName || ''} relative`}>
+            {/* Imagem posicionada totalmente à direita */}
+            {imageSrc && (
+              <div className="absolute right-0 sm:right-0 md:right-0 top-4 sm:top-6 md:top-8 z-20 hidden md:flex items-center justify-center">
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt}
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              </div>
+            )}
+            {/* Texto mais para o início da seção com película */}
+            <div className={`pt-2 sm:pt-4 md:pt-6 lg:pt-8 pr-0 md:pr-[220px] lg:pr-[280px] xl:pr-[350px]`}>
+              <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 bg-background/50 backdrop-blur-sm p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
+                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center`}>{title}</h2>
+                {subtitle && (
+                  <p className={`text-sm sm:text-base md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center`}>{subtitle}</p>
+                )}
+                <p className={`text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto`}>{description}</p>
+              </div>
+            </div>
+            
+            {/* Imagem para mobile quando está à direita */}
+            <div className="flex justify-center items-center mt-4 md:hidden">
+              {videoSrc ? (
+                <video 
+                  src={videoSrc}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              ) : imageSrc ? (
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt}
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              ) : null}
+            </div>
+          </div>
+        ) : imageLeft ? (
+          // Layout com imagem totalmente à esquerda, texto no início
+          <div className={`${textClassName || ''} relative`}>
+            {/* Imagem posicionada totalmente à esquerda */}
+            {imageSrc && (
+              <div className="absolute left-0 sm:left-0 md:left-0 top-4 sm:top-6 md:top-8 z-20 hidden md:flex items-center justify-center">
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt}
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              </div>
+            )}
+            {/* Texto mais para o início da seção com película */}
+            <div className={`pt-2 sm:pt-4 md:pt-6 lg:pt-8 pl-0 md:pl-[170px] lg:pl-[190px] xl:pl-[210px]`}>
+              <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 bg-background/50 backdrop-blur-sm p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
+                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center`}>{title}</h2>
+                {subtitle && (
+                  <p className={`text-sm sm:text-base md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center`}>{subtitle}</p>
+                )}
+                <p className={`text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto`}>{description}</p>
+              </div>
+            </div>
+            
+            {/* Imagem para mobile quando está à esquerda */}
+            <div className="flex justify-center items-center mt-4 md:hidden">
+              {videoSrc ? (
+                <video 
+                  src={videoSrc}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              ) : imageSrc ? (
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt}
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              ) : null}
+            </div>
+          </div>
+        ) : imageBottomRight ? (
+          // Layout com imagem na parte inferior direita, centralizada verticalmente
+          <div className={`${textClassName || ''} relative min-h-full`}>
+            {/* Imagem posicionada na parte inferior direita, centralizada verticalmente no vídeo */}
+            {imageSrc && (
+              <div className="absolute right-0 sm:right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center">
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt}
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              </div>
+            )}
+            {/* Texto acima da imagem com película */}
+            <div className={`pt-2 sm:pt-4 md:pt-6 lg:pt-8`}>
+              <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 bg-background/50 backdrop-blur-sm p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
+                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center`}>{title}</h2>
+                {subtitle && (
+                  <p className={`text-sm sm:text-base md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center`}>{subtitle}</p>
+                )}
+                <p className={`text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto`}>{description}</p>
+              </div>
+            </div>
+            
+            {/* Imagem para mobile quando está embaixo */}
+            <div className="flex justify-center items-center mt-4 md:hidden">
+              {videoSrc ? (
+                <video 
+                  src={videoSrc}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              ) : imageSrc ? (
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt}
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              ) : null}
+            </div>
+          </div>
+        ) : imageTopRight ? (
+          // Layout com imagem no canto superior direito e texto abaixo
+          <div className={`${textClassName || ''} relative`}>
+            {/* Imagem posicionada totalmente no canto direito */}
+            {imageSrc && (
+              <div className="absolute right-0 sm:right-0 md:right-0 top-4 sm:top-6 md:top-8 z-20 hidden md:flex items-center justify-center">
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt}
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              </div>
+            )}
+            {/* Texto abaixo da imagem com película */}
+            <div className={`pt-16 sm:pt-20 md:pt-28 lg:pt-32 xl:pt-40`}>
+              <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 bg-background/50 backdrop-blur-sm p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
+                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center`}>{title}</h2>
+                {subtitle && (
+                  <p className={`text-sm sm:text-base md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center`}>{subtitle}</p>
+                )}
+                <p className={`text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto`}>{description}</p>
+              </div>
+            </div>
+            
+            {/* Imagem para mobile quando está no topo */}
+            <div className="flex justify-center items-center mt-4 md:hidden">
+              {videoSrc ? (
+                <video 
+                  src={videoSrc}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              ) : imageSrc ? (
+                <img 
+                  src={imageSrc} 
+                  alt={imageAlt}
+                  className={imageClassName || "w-auto h-auto object-contain"}
+                />
+              ) : null}
+            </div>
+          </div>
+        ) : imageRightAbsolute ? (
           // Layout sem grid quando imagem está absoluta
           <div className={`${textCenter ? 'text-center' : ''} ${textClassName || ''} relative`}>
             {/* Imagem posicionada absolutamente à direita dentro do container */}
@@ -80,7 +254,7 @@ const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, 
               </div>
             )}
             <div className={`pr-0 md:pr-[140px] lg:pr-[160px]`}>
-              <div className={`space-y-2 sm:space-y-3 md:space-y-4 ${backgroundVideo ? 'bg-background/85 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg' : ''} ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
+              <div className={`space-y-2 sm:space-y-3 md:space-y-4 ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
                 <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center`}>{title}</h2>
                 {subtitle && (
                   <p className={`text-sm sm:text-base md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center`}>{subtitle}</p>
@@ -111,8 +285,8 @@ const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, 
           </div>
         ) : (
           // Layout com grid normal
-          <div className={`grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-6 lg:gap-8 items-center ${reverse ? 'md:grid-flow-dense' : ''}`}>
-            <div className={`space-y-2 sm:space-y-3 md:space-y-4 order-2 md:order-1 ${reverse ? 'md:col-start-2 md:order-2' : ''} ${backgroundVideo ? 'bg-background/85 backdrop-blur-sm p-3 sm:p-4 md:p-5 rounded-lg' : ''} ${textCenter ? 'text-center mx-auto' : ''} ${textClassName || ''}`}>
+          <div className={`grid md:grid-cols-2 gap-2.5 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 items-center ${reverse ? 'md:grid-flow-dense' : ''}`}>
+            <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 order-2 md:order-1 ${reverse ? 'md:col-start-2 md:order-2' : ''} ${textCenter ? 'text-center mx-auto' : ''} ${textClassName || ''}`}>
               <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight ${textCenter ? 'text-center' : ''}`}>{title}</h2>
               {subtitle && (
                 <p className={`text-sm sm:text-base md:text-lg font-medium text-muted-foreground/90 leading-relaxed ${textCenter ? 'text-center' : ''}`}>{subtitle}</p>

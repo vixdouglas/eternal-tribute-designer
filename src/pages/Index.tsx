@@ -81,7 +81,7 @@ const Index = () => {
       <FloatingButtons />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
+      <section className="relative min-h-[75vh] sm:min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
             src={heroImage} 
@@ -91,7 +91,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/92 via-background/75 to-background sm:from-background/90 sm:via-background/70 sm:to-background"></div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center space-y-3 sm:space-y-4 md:space-y-6 fade-in py-12 sm:py-16 md:py-0">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center space-y-2.5 sm:space-y-3 md:space-y-4 lg:space-y-6 fade-in py-10 sm:py-12 md:py-16 lg:py-0">
           <img src={logo} alt="Vitória Placas" className="w-24 sm:w-28 md:w-40 lg:w-48 xl:w-72 mx-auto mb-3 sm:mb-4 md:mb-6" />
           
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight px-2 sm:px-4">
@@ -139,11 +139,10 @@ const Index = () => {
         imageAlt="Placa de homenagem em estojo de acrílico"
         backgroundVideo={homenagemBackgroundVideo}
         backgroundVideoOffset="25%"
-        backgroundVideoScale="scale-110 sm:scale-105 md:scale-100"
         backgroundVideoPosition="center"
-        imageRightAbsolute={true}
+        imageLeft={true}
         textCenter={true}
-        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+        imageClassName="w-auto h-auto max-w-[120px] sm:max-w-[140px] md:max-w-[160px] lg:max-w-[180px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
       />
 
       <ProductSection
@@ -154,9 +153,9 @@ const Index = () => {
         backgroundVideo={awardVideo}
         backgroundVideoOffset="40%"
         backgroundVideoPosition="center"
-        reverse
-        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-        imageContainerClassName="flex justify-center items-center"
+        imageRight={true}
+        textCenter={true}
+        imageClassName="w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
       />
 
       <ProductSection
@@ -165,8 +164,11 @@ const Index = () => {
         imageSrc={inaugurationImage}
         imageAlt="Placa de inauguração em aço inox"
         backgroundVideo={inaugurationVideo}
-        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-        imageContainerClassName="flex justify-center items-center"
+        backgroundVideoOffset="35%"
+        backgroundVideoPosition="left"
+        imageLeft={true}
+        textCenter={true}
+        imageClassName="w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
       />
 
       <ProductSection
@@ -175,9 +177,9 @@ const Index = () => {
         imageSrc={graveImage}
         imageAlt="Placa memorial para túmulo"
         backgroundVideo={graveVideo}
-        reverse
-        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-        imageContainerClassName="flex justify-center items-center"
+        imageRight={true}
+        textCenter={true}
+        imageClassName="w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
       />
 
       <ProductSection
@@ -187,14 +189,15 @@ const Index = () => {
         imageSrc={letreiroImage}
         imageAlt="Placa de letreiro em aço inox"
         backgroundVideo={letreiroVideo}
-        imageClassName="w-auto h-auto max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
-        imageContainerClassName="flex justify-center items-center"
+        imageLeft={true}
+        textCenter={true}
+        imageClassName="w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
       />
 
       {/* Gallery Section */}
-      <section className="py-6 sm:py-8 md:py-10 lg:py-16 px-3 sm:px-4 md:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
+      <section className="py-5 sm:py-6 md:py-8 lg:py-12 xl:py-16 px-3 sm:px-4 md:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-4 sm:mb-6 md:mb-10">
+          <div className="text-center space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Galeria de Trabalhos</h2>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-3 sm:px-4">
               Conheça alguns dos nossos projetos e veja a qualidade que entregamos em cada placa
@@ -243,71 +246,71 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 relative overflow-hidden">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <video 
-              src={sobreVideo}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-contain opacity-40 sm:opacity-45 md:opacity-50"
-              style={{ 
-                maxWidth: '60%', 
-                maxHeight: '60%',
-                objectFit: 'contain'
-              }}
-            />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/60 to-background/75 sm:from-background/80 sm:via-background/50 sm:to-background/70"></div>
-        </div>
-        <div className="container mx-auto max-w-4xl text-center space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 relative z-10">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Sobre a Vitória Placas</h2>
-          
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-2 sm:px-4">
-            Há anos transformando homenagens em memórias eternas. A <strong>Vitória Placas</strong> é 
-            especialista em comunicação visual e fabricação de placas personalizadas de alta qualidade.
-          </p>
+      <section id="sobre" className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 relative overflow-hidden bg-[hsl(0,0%,18%)]">
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 items-center">
+            {/* Conteúdo à esquerda */}
+            <div className="space-y-2.5 sm:space-y-3 md:space-y-4 lg:space-y-6 xl:space-y-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-left">Sobre a Vitória Placas</h2>
+              
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-left">
+                Há anos transformando homenagens em memórias eternas. A <strong>Vitória Placas</strong> é 
+                especialista em comunicação visual e fabricação de placas personalizadas de alta qualidade.
+              </p>
 
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed px-2 sm:px-4">
-            Com fabricação própria e comprometimento com a excelência, atendemos todo o Espírito Santo 
-            entregando produtos que combinam elegância, durabilidade e respeito. Cada placa é única, 
-            pensada com carinho para eternizar seus momentos mais importantes.
-          </p>
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-left">
+                Com fabricação própria e comprometimento com a excelência, atendemos todo o Espírito Santo 
+                entregando produtos que combinam elegância, durabilidade e respeito. Cada placa é única, 
+                pensada com carinho para eternizar seus momentos mais importantes.
+              </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-6 md:pt-8">
-            <Card className="hover-lift bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
-              <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
-                <Heart className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold">Feito com Cuidado</h3>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Cada detalhe pensado para eternizar memórias</p>
-              </CardContent>
-            </Card>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-6 md:pt-8">
+                <Card className="hover-lift bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
+                  <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
+                    <Heart className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold">Feito com Cuidado</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Cada detalhe pensado para eternizar memórias</p>
+                  </CardContent>
+                </Card>
 
-            <Card className="hover-lift bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
-              <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
-                <Award className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold">Alta Qualidade</h3>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Materiais nobres e acabamento premium</p>
-              </CardContent>
-            </Card>
+                <Card className="hover-lift bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
+                  <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
+                    <Award className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold">Alta Qualidade</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Materiais nobres e acabamento premium</p>
+                  </CardContent>
+                </Card>
 
-            <Card className="hover-lift sm:col-span-2 md:col-span-1 bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
-              <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
-                <Building2 className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold">Fabricação Própria</h3>
-                <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Produção local com entrega em todo o ES</p>
-              </CardContent>
-            </Card>
+                <Card className="hover-lift bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
+                  <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
+                    <Building2 className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold">Fabricação Própria</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground">Produção local com entrega em todo o ES</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Vídeo à direita */}
+            <div className="relative w-full h-full min-h-[250px] sm:min-h-[300px] md:min-h-[400px] lg:min-h-[500px] rounded-lg overflow-hidden">
+              <video 
+                src={sobreVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-70 sm:opacity-75 md:opacity-80 lg:opacity-85 xl:opacity-90"
+              />
+              <div className="absolute inset-0 bg-gradient-to-l from-background/20 to-transparent"></div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section id="depoimentos" className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,18%)] to-[hsl(0,0%,25%)]">
+      <section id="depoimentos" className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,18%)] to-[hsl(0,0%,25%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-4 sm:mb-6 md:mb-10">
+          <div className="text-center space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">O Que Dizem Nossos Clientes</h2>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground px-2 sm:px-4">
               A satisfação de quem confia em nosso trabalho
@@ -340,9 +343,9 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-8 sm:py-10 md:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
+      <section id="contato" className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-2 sm:space-y-3 md:space-y-4 mb-4 sm:mb-6 md:mb-10">
+          <div className="text-center space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Solicite Seu Orçamento</h2>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground px-2 sm:px-4">
               Preencha o formulário e entraremos em contato via WhatsApp
@@ -387,7 +390,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-b from-[hsl(0,0%,20%)] to-[hsl(0,0%,15%)] border-t border-border py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6">
+      <footer className="bg-gradient-to-b from-[hsl(0,0%,12%)] to-[hsl(0,0%,8%)] border-t border-border py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-4 sm:mb-6 md:mb-8">
             <div className="sm:col-span-2 md:col-span-1">

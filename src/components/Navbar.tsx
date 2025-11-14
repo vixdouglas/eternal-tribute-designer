@@ -39,8 +39,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <img src={logo} alt="Vitória Placas" className="h-8 md:h-10" />
+        <div className="flex items-center justify-between h-20 md:h-24">
+          <img src={logo} alt="Vitória Placas" className="h-14 md:h-18" />
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
