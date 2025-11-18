@@ -81,7 +81,7 @@ const Index = () => {
       <FloatingButtons />
 
       {/* Hero Section */}
-      <section className="relative min-h-[75vh] sm:min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
             src={heroImage} 
@@ -91,20 +91,20 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/92 via-background/75 to-background sm:from-background/90 sm:via-background/70 sm:to-background"></div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center space-y-2.5 sm:space-y-3 md:space-y-4 lg:space-y-6 fade-in py-10 sm:py-12 md:py-16 lg:py-0">
-          <img src={logo} alt="Vitória Placas" className="w-24 sm:w-28 md:w-40 lg:w-48 xl:w-72 mx-auto mb-3 sm:mb-4 md:mb-6" />
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10 text-center space-y-2 sm:space-y-2.5 md:space-y-4 lg:space-y-6 fade-in py-8 sm:py-10 md:py-16 lg:py-0">
+          <img src={logo} alt="Vitória Placas" className="w-20 sm:w-24 md:w-40 lg:w-48 xl:w-72 mx-auto mb-2 sm:mb-3 md:mb-6" />
           
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight px-2 sm:px-4">
+          <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight px-2 sm:px-4">
             Transformamos Homenagens<br />
             <span className="text-gradient">em Eternas Memórias</span>
           </h1>
           
-          <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-muted-foreground max-w-3xl mx-auto px-3 sm:px-4 md:px-6 leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-muted-foreground max-w-3xl mx-auto px-2 sm:px-3 md:px-6 leading-relaxed">
             Placas personalizadas para homenagens, premiações, inaugurações e túmulos. 
             Cada detalhe pensado com respeito e elegância.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 justify-center pt-3 sm:pt-4 md:pt-6 px-4">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-2.5 md:gap-4 justify-center pt-2 sm:pt-3 md:pt-6 px-3 sm:px-4">
             <Button 
               size="lg" 
               className="text-xs sm:text-sm md:text-base lg:text-lg gap-2 px-5 sm:px-6 md:px-8 h-11 sm:h-12 md:h-auto w-full sm:w-auto min-w-[180px] sm:min-w-[200px] touch-manipulation"
@@ -134,7 +134,7 @@ const Index = () => {
       <ProductSection
         id="produtos"
         title="Placas de Homenagem"
-        description="Nossas placas em acrílico são verdadeiras obras de arte. Com gravação em metal nobre e apresentação em estojo elegante, cada homenagem é única e inesquecível. Personalize com nomes, logotipos, datas e frases que eternizam momentos especiais."
+        description="Nossas placas em aço e acrílico são verdadeiras obras de arte. Com gravação em metal nobre e apresentação em estojo elegante, cada homenagem é única e inesquecível. Personalize com nomes, logotipos, dados e frases que eternizam momentos especiais."
         imageSrc={homenagemImage}
         imageAlt="Placa de homenagem em estojo de acrílico"
         backgroundVideo={homenagemBackgroundVideo}
@@ -147,7 +147,7 @@ const Index = () => {
 
       <ProductSection
         title="Placas de Premiação"
-        description="Reconheça conquistas e celebre vitórias com placas de premiação de alto padrão. Em metal, acrílico ou vidro, nossos troféus corporativos e esportivos transmitem prestígio, durabilidade e elegância para seus eventos mais importantes."
+        description="Reconheça conquistas e celebres vitórias com placas de premiação de alto padrão. em quadro de madeira com profundidade e letreiro em alto relevo, nossas placas corporativas transmitem durabilidade e elegância para seus eventos mais importantes."
         imageSrc={awardImage}
         imageAlt="Placa de premiação corporativa"
         backgroundVideo={awardVideo}
@@ -168,12 +168,12 @@ const Index = () => {
         backgroundVideoPosition="left"
         imageLeft={true}
         textCenter={true}
-        imageClassName="w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10"
+        imageClassName="w-auto h-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] object-contain border-2 sm:border-[3px] md:border-4 border-white shadow-2xl rounded-sm bg-background/10 -ml-4 sm:-ml-6 md:-ml-8"
       />
 
       <ProductSection
         title="Placas para Túmulos"
-        description="Com respeito e sensibilidade, criamos placas funerárias que honram memórias e celebram vidas. Acabamento profissional em granito ou metal, gravações elegantes e duráveis que resistem ao tempo e preservam lembranças com dignidade."
+        description="Com respeito e sensibilidade, criamos placas funerárias que honram memórias e celebram vidas. Acabamento profissional em aço inox, gravações elegantes e resistentes que resistem ao tempo e preservam lembranças com dignidade."
         imageSrc={graveImage}
         imageAlt="Placa memorial para túmulo"
         backgroundVideo={graveVideo}
@@ -184,8 +184,8 @@ const Index = () => {
 
       <ProductSection
         title="Placas de Letreiro"
-        subtitle="Sinalização visual profissional para identidade e comunicação empresarial. Valorize cada detalhe da sua marca."
-        description="Nossas placas de letreiro personalizadas — ideais para portas, mesas, departamentos e áreas internas — reforçam a identidade visual da sua empresa com design elegante, materiais duráveis e acabamento impecável. Transforme ambientes corporativos em espaços organizados, sofisticados e alinhados à essência da sua marca."
+        subtitle="Sinalização visual profissional para identidade e comunicação empresarial."
+        description="Valorize cada detalhe da sua marca. Nossas placas de letreiro personalizadas ideais para portas, mesas, departamentos e áreas internas reforçam a identidade visual de sua empresa com design elegante, materiais limpos e acabamento impecável. Transforme ambientes corporativos em espaços organizados, sofisticados e alinhados à essência de sua marca."
         imageSrc={letreiroImage}
         imageAlt="Placa de letreiro em aço inox"
         backgroundVideo={letreiroVideo}
@@ -195,11 +195,11 @@ const Index = () => {
       />
 
       {/* Gallery Section */}
-      <section className="py-5 sm:py-6 md:py-8 lg:py-12 xl:py-16 px-3 sm:px-4 md:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
+      <section className="py-4 sm:py-5 md:py-8 lg:py-12 xl:py-16 px-3 sm:px-4 md:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Galeria de Trabalhos</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-3 sm:px-4">
+          <div className="text-center space-y-1 sm:space-y-1.5 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
+            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Galeria de Trabalhos</h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-2 sm:px-3 md:px-4">
               Conheça alguns dos nossos projetos e veja a qualidade que entregamos em cada placa
             </p>
           </div>
@@ -217,14 +217,14 @@ const Index = () => {
           >
             <CarouselPrevious className="left-0.5 sm:left-1 md:left-2 lg:left-4 z-20 bg-background/98 hover:bg-background/100 active:bg-background border border-primary/30 h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 touch-manipulation active:scale-90 shadow-md hover:shadow-lg transition-all" />
             <CarouselNext className="right-0.5 sm:right-1 md:right-2 lg:right-4 z-20 bg-background/98 hover:bg-background/100 active:bg-background border border-primary/30 h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 touch-manipulation active:scale-90 shadow-md hover:shadow-lg transition-all" />
-            <CarouselContent className="-ml-1.5 sm:-ml-2 md:-ml-3 lg:-ml-4 touch-pan-x">
+            <CarouselContent className="-ml-1 sm:-ml-1.5 md:-ml-3 lg:-ml-4 touch-pan-x">
               {carouselImages.map((img, idx) => (
-                <CarouselItem key={idx} className="pl-1.5 sm:pl-2 md:pl-3 lg:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 flex items-center justify-center py-2 sm:py-3">
-                  <div className="w-full flex items-center justify-center h-full min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px]">
+                <CarouselItem key={idx} className="pl-1 sm:pl-1.5 md:pl-3 lg:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 flex items-center justify-center py-1.5 sm:py-2 md:py-3">
+                  <div className="w-full flex items-center justify-center h-full min-h-[160px] sm:min-h-[200px] md:min-h-[260px] lg:min-h-[300px]">
                     <img 
                       src={img} 
                       alt={`Trabalho ${idx + 1}`}
-                      className="max-w-[95%] max-h-[260px] sm:max-h-[300px] md:max-h-[350px] lg:max-h-[400px] xl:max-h-[450px] w-auto h-auto object-contain cursor-pointer active:scale-95 hover:scale-105 transition-transform duration-200 block touch-manipulation select-none"
+                      className="max-w-[90%] sm:max-w-[95%] max-h-[220px] sm:max-h-[280px] md:max-h-[350px] lg:max-h-[400px] xl:max-h-[450px] w-auto h-auto object-contain cursor-pointer active:scale-95 hover:scale-105 transition-transform duration-200 block touch-manipulation select-none"
                       loading="lazy"
                       decoding="async"
                       draggable="false"
@@ -246,25 +246,25 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="sobre" className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 relative overflow-hidden bg-[hsl(0,0%,18%)]">
+      <section id="sobre" className="py-5 sm:py-6 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6 relative overflow-hidden bg-[hsl(0,0%,18%)]">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-8 lg:gap-10 xl:gap-12 items-center">
             {/* Conteúdo à esquerda */}
-            <div className="space-y-2.5 sm:space-y-3 md:space-y-4 lg:space-y-6 xl:space-y-8">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-left">Sobre a Vitória Placas</h2>
+            <div className="space-y-2 sm:space-y-2.5 md:space-y-4 lg:space-y-6 xl:space-y-8">
+              <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-left">Sobre a Vitória Placas</h2>
               
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-left">
+              <p className="text-xs sm:text-sm md:text-lg text-muted-foreground leading-relaxed text-left">
                 Há anos transformando homenagens em memórias eternas. A <strong>Vitória Placas</strong> é 
                 especialista em comunicação visual e fabricação de placas personalizadas de alta qualidade.
               </p>
 
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-left">
+              <p className="text-xs sm:text-sm md:text-lg text-muted-foreground leading-relaxed text-left">
                 Com fabricação própria e comprometimento com a excelência, atendemos todo o Espírito Santo 
                 entregando produtos que combinam elegância, durabilidade e respeito. Cada placa é única, 
                 pensada com carinho para eternizar seus momentos mais importantes.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 pt-4 sm:pt-6 md:pt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 md:gap-6 pt-3 sm:pt-4 md:pt-8">
                 <Card className="hover-lift bg-background/95 backdrop-blur-md sm:bg-background/90 border border-border/50">
                   <CardContent className="p-4 sm:p-5 md:p-6 text-center space-y-2 sm:space-y-3">
                     <Heart className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary mx-auto" />
@@ -292,7 +292,7 @@ const Index = () => {
             </div>
 
             {/* Vídeo à direita */}
-            <div className="relative w-full h-full min-h-[250px] sm:min-h-[300px] md:min-h-[400px] lg:min-h-[500px] rounded-lg overflow-hidden">
+            <div className="relative w-full h-full min-h-[200px] sm:min-h-[250px] md:min-h-[400px] lg:min-h-[500px] rounded-lg overflow-hidden">
               <video 
                 src={sobreVideo}
                 autoPlay
@@ -308,16 +308,16 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="depoimentos" className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,18%)] to-[hsl(0,0%,25%)]">
+      <section id="depoimentos" className="py-5 sm:py-6 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6 bg-gradient-to-b from-[hsl(0,0%,18%)] to-[hsl(0,0%,25%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">O Que Dizem Nossos Clientes</h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground px-2 sm:px-4">
+          <div className="text-center space-y-1 sm:space-y-1.5 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
+            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">O Que Dizem Nossos Clientes</h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground px-2 sm:px-3 md:px-4">
               A satisfação de quem confia em nosso trabalho
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3 md:gap-6">
             <TestimonialCard
               name="Maria Silva"
               role="Diretora de RH"
@@ -343,10 +343,10 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
+      <section id="contato" className="py-5 sm:py-6 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6 bg-gradient-to-b from-[hsl(0,0%,25%)] to-[hsl(0,0%,20%)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Solicite Seu Orçamento</h2>
+          <div className="text-center space-y-1 sm:space-y-1.5 md:space-y-3 lg:space-y-4 mb-3 sm:mb-4 md:mb-6 lg:mb-10">
+            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold px-2 sm:px-4">Solicite Seu Orçamento</h2>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground px-2 sm:px-4">
               Preencha o formulário e entraremos em contato via WhatsApp
             </p>

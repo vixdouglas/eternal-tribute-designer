@@ -25,7 +25,7 @@ interface ProductSectionProps {
 
 const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, videoSrc, backgroundVideo, reverse = false, imageClassName, imageContainerClassName, backgroundVideoScale, backgroundVideoPosition, backgroundVideoOffset, textCenter = false, textClassName, imageRightAbsolute = false, imageTopRight = false, imageBottomRight = false, imageLeft = false, imageRight = false }: ProductSectionProps) => {
   return (
-    <section id={id} className={`min-h-[400px] sm:min-h-[500px] md:min-h-[550px] lg:min-h-[600px] py-8 sm:py-10 md:py-14 lg:py-16 px-4 sm:px-6 relative overflow-x-hidden bg-[hsl(0,0%,18%)]`}>
+    <section id={id} className={`min-h-[350px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[600px] py-6 sm:py-8 md:py-14 lg:py-16 px-3 sm:px-4 md:px-6 relative overflow-x-hidden bg-[hsl(0,0%,18%)]`}>
       {backgroundVideo && (
         <>
           <div className="absolute inset-0 z-0 overflow-hidden" style={{ left: '50%', transform: 'translateX(-50%)', width: '100vw' }}>
@@ -37,7 +37,7 @@ const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, 
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover object-center object-top opacity-50 sm:opacity-55 md:opacity-60 lg:opacity-65"
+                  className="w-full h-full object-cover object-center object-top opacity-40 sm:opacity-50 md:opacity-60 lg:opacity-65"
                 />
               </div>
             ) : (
@@ -47,7 +47,7 @@ const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, 
                 loop
                 muted
                 playsInline
-                className={`w-full h-full object-cover opacity-50 sm:opacity-55 md:opacity-60 lg:opacity-65 ${imageLeft || imageRight ? 'scale-75' : ''}`}
+                className={`w-full h-full object-cover opacity-40 sm:opacity-50 md:opacity-60 lg:opacity-65 ${imageLeft || imageRight ? 'scale-75' : ''}`}
                 style={
                   backgroundVideoOffset 
                     ? { 
@@ -78,18 +78,18 @@ const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, 
               </div>
             )}
             {/* Texto mais para o início da seção com película */}
-            <div className={`pt-2 sm:pt-4 md:pt-6 lg:pt-8 pr-0 md:pr-[220px] lg:pr-[280px] xl:pr-[350px]`}>
-              <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 bg-background/50 backdrop-blur-sm p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
-                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center`}>{title}</h2>
+            <div className={`pt-2 sm:pt-3 md:pt-6 lg:pt-8 pr-0 md:pr-[380px] lg:pr-[450px] xl:pr-[520px]`}>
+              <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 bg-background/50 backdrop-blur-sm p-2.5 sm:p-3 md:p-5 lg:p-6 rounded-lg ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
+                <h2 className={`text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center px-1`}>{title}</h2>
                 {subtitle && (
-                  <p className={`text-sm sm:text-base md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center`}>{subtitle}</p>
+                  <p className={`text-xs sm:text-sm md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center px-1`}>{subtitle}</p>
                 )}
-                <p className={`text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto`}>{description}</p>
+                <p className={`text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto px-1`}>{description}</p>
               </div>
             </div>
             
             {/* Imagem para mobile quando está à direita */}
-            <div className="flex justify-center items-center mt-4 md:hidden">
+            <div className="flex justify-center items-center mt-3 sm:mt-4 md:hidden">
               {videoSrc ? (
                 <video 
                   src={videoSrc}
@@ -122,18 +122,18 @@ const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, 
               </div>
             )}
             {/* Texto mais para o início da seção com película */}
-            <div className={`pt-2 sm:pt-4 md:pt-6 lg:pt-8 pl-0 md:pl-[170px] lg:pl-[190px] xl:pl-[210px]`}>
-              <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 bg-background/50 backdrop-blur-sm p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
-                <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center`}>{title}</h2>
+            <div className={`pt-2 sm:pt-3 md:pt-6 lg:pt-8 pl-0 md:pl-[280px] lg:pl-[320px] xl:pl-[360px]`}>
+              <div className={`space-y-1.5 sm:space-y-2 md:space-y-3 lg:space-y-4 bg-background/50 backdrop-blur-sm p-2.5 sm:p-3 md:p-5 lg:p-6 rounded-lg ${textCenter ? 'max-w-3xl mx-auto' : ''}`}>
+                <h2 className={`text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-gradient leading-tight text-center px-1`}>{title}</h2>
                 {subtitle && (
-                  <p className={`text-sm sm:text-base md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center`}>{subtitle}</p>
+                  <p className={`text-xs sm:text-sm md:text-lg font-medium text-muted-foreground/90 leading-relaxed text-center px-1`}>{subtitle}</p>
                 )}
-                <p className={`text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto`}>{description}</p>
+                <p className={`text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-center max-w-2xl mx-auto px-1`}>{description}</p>
               </div>
             </div>
             
             {/* Imagem para mobile quando está à esquerda */}
-            <div className="flex justify-center items-center mt-4 md:hidden">
+            <div className="flex justify-center items-center mt-3 sm:mt-4 md:hidden">
               {videoSrc ? (
                 <video 
                   src={videoSrc}
