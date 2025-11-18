@@ -38,9 +38,9 @@ const Navbar = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          <img src={logo} alt="Vitória Placas" className="h-14 md:h-18" />
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-24">
+          <img src={logo} alt="Vitória Placas" className="h-10 sm:h-12 md:h-18" />
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
@@ -85,39 +85,39 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
-            <div className="flex flex-col py-4 space-y-2">
+            <div className="flex flex-col py-3 space-y-1">
               <a 
                 href="#produtos" 
-                className="px-4 py-3 text-base text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
+                className="px-3 py-2.5 text-sm text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
                 onClick={closeMobileMenu}
               >
                 Produtos
               </a>
               <a 
                 href="#sobre" 
-                className="px-4 py-3 text-base text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
+                className="px-3 py-2.5 text-sm text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
                 onClick={closeMobileMenu}
               >
                 Sobre
               </a>
               <a 
                 href="#depoimentos" 
-                className="px-4 py-3 text-base text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
+                className="px-3 py-2.5 text-sm text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
                 onClick={closeMobileMenu}
               >
                 Depoimentos
               </a>
               <a 
                 href="#contato" 
-                className="px-4 py-3 text-base text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
+                className="px-3 py-2.5 text-sm text-foreground hover:text-primary hover:bg-primary/10 transition-colors active:bg-primary/20 touch-manipulation"
                 onClick={closeMobileMenu}
               >
                 Contato
               </a>
-              <div className="px-4 pt-2">
+              <div className="px-3 pt-2">
                 <Button 
                   size="lg"
-                  className="w-full gap-2 h-12 touch-manipulation"
+                  className="w-full gap-2 h-11 text-sm touch-manipulation"
                   asChild
                 >
                   <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">

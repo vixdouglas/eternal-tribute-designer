@@ -25,7 +25,7 @@ interface ProductSectionProps {
 
 const ProductSection = ({ id, title, subtitle, description, imageSrc, imageAlt, videoSrc, backgroundVideo, reverse = false, imageClassName, imageContainerClassName, backgroundVideoScale, backgroundVideoPosition, backgroundVideoOffset, textCenter = false, textClassName, imageRightAbsolute = false, imageTopRight = false, imageBottomRight = false, imageLeft = false, imageRight = false }: ProductSectionProps) => {
   return (
-    <section id={id} className={`min-h-[350px] sm:min-h-[450px] md:min-h-[550px] lg:min-h-[600px] py-6 sm:py-8 md:py-14 lg:py-16 px-3 sm:px-4 md:px-6 relative overflow-x-hidden bg-[hsl(0,0%,18%)]`}>
+    <section id={id} className={`min-h-[320px] sm:min-h-[400px] md:min-h-[550px] lg:min-h-[600px] py-5 sm:py-6 md:py-14 lg:py-16 px-3 sm:px-4 md:px-6 relative overflow-x-hidden bg-[hsl(0,0%,18%)]`}>
       {backgroundVideo && (
         <>
           <div className="absolute inset-0 z-0 overflow-hidden" style={{ left: '50%', transform: 'translateX(-50%)', width: '100vw' }}>

@@ -81,7 +81,7 @@ const Index = () => {
       <FloatingButtons />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
+      <section className="relative min-h-[65vh] sm:min-h-[75vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
             src={heroImage} 
@@ -91,10 +91,10 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/92 via-background/75 to-background sm:from-background/90 sm:via-background/70 sm:to-background"></div>
         </div>
 
-        <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10 text-center space-y-2 sm:space-y-2.5 md:space-y-4 lg:space-y-6 fade-in py-8 sm:py-10 md:py-16 lg:py-0">
-          <img src={logo} alt="Vitória Placas" className="w-20 sm:w-24 md:w-40 lg:w-48 xl:w-72 mx-auto mb-2 sm:mb-3 md:mb-6" />
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10 text-center space-y-1.5 sm:space-y-2 md:space-y-4 lg:space-y-6 fade-in py-6 sm:py-8 md:py-16 lg:py-0">
+          <img src={logo} alt="Vitória Placas" className="w-16 sm:w-20 md:w-40 lg:w-48 xl:w-72 mx-auto mb-1.5 sm:mb-2 md:mb-6" />
           
-          <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight px-2 sm:px-4">
+          <h1 className="text-base sm:text-lg md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight px-2 sm:px-4">
             Transformamos Homenagens<br />
             <span className="text-gradient">em Eternas Memórias</span>
           </h1>
@@ -104,7 +104,7 @@ const Index = () => {
             Cada detalhe pensado com respeito e elegância.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-2.5 md:gap-4 justify-center pt-2 sm:pt-3 md:pt-6 px-3 sm:px-4">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-2.5 md:gap-4 justify-center pt-1.5 sm:pt-2 md:pt-6 px-3 sm:px-4">
             <Button 
               size="lg" 
               className="text-xs sm:text-sm md:text-base lg:text-lg gap-2 px-5 sm:px-6 md:px-8 h-11 sm:h-12 md:h-auto w-full sm:w-auto min-w-[180px] sm:min-w-[200px] touch-manipulation"
